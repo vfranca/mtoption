@@ -10,7 +10,7 @@ def test_version():
 @mock.patch("mtoptions.options.mql5")
 def test_pega_todas_as_puts_de_um_ativo(mql5):
     mql5.iClose.return_value = 0.19
-    assert options.puts("bova11", 96, 99) == ["bovao96", "bovao97", "bovao98"]
+    assert options.puts("bovao", 96, 99) == ["bovao96", "bovao97", "bovao98"]
 
 
 @mock.patch("mtoptions.options.mql5")
