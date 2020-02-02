@@ -15,3 +15,8 @@ def puts(symbol: str, start: int, limit: int) -> list:
         if bool(price):
             res.append(test)
     return res
+
+
+def price(symbol: str) -> float:
+    """Retorna o preço da opção."""
+    return mql5.iClose(symbol, "Daily", 0)
