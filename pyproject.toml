@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "options"
+name = "mtoptions"
 version = "0.1.0"
-description = ""
+description = "Utilitario de linha de comando para operacoes com opcoes no MetaTrader 5"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
 
 [tool.poetry.dependencies]

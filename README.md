@@ -1,8 +1,4 @@
-# Boilerplate de um Repositório Git
+# MTOptions  
 
-Fornece uma estrutura básica de arquivos para um repositório no GitHub.
-
-[Guidelines de Contribuição](CONTRIBUTING.md)
-
-Este projeto é licensiado sob os termos da [MIT](../LICENSE).
+Utilitário de linha de comando para operações com opções utilizando o MetaTrader5.  
 
