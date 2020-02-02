@@ -9,6 +9,7 @@ from options import options
 def puts(symbol, start, limit):
     """Exibe as puts do ativo."""
     symbols = options.puts(symbol, start, limit)
-    for s in symbols:
-        click.echo(s)
+    for symbol in symbols:
+        price = options.price(symbol)
+        click.echo("%s %.2f" % (symbol, price))
     return 0
