@@ -1,6 +1,7 @@
 from mtoptions import __version__
 from mtoptions import options
 from unittest import mock
+from .fixtures import series
 
 
 def test_version():
@@ -17,3 +18,7 @@ def test_pega_todas_as_puts_de_um_ativo(mql5):
 def test_pega_o_preco_da_opcao(mql5):
     mql5.iClose.return_value = 0.19
     assert options.price("bovao96") == 0.19
+
+
+def test_obtem_series():
+    assert options.get_series("put") == series["put"]

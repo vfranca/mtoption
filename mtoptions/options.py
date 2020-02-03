@@ -1,4 +1,5 @@
 from PyMQL5 import PyMQL5
+from mtoptions import series
 
 
 mql5 = PyMQL5()
@@ -18,3 +19,8 @@ def puts(prefix: str, start: int, limit: int) -> list:
 def price(symbol: str) -> float:
     """Retorna o preço da opção."""
     return mql5.iClose(symbol, "Daily", 0)
+
+
+def get_series(type: str) -> dict:
+    """Retorna as series do tipo de opção."""
+    return series.series[type]
