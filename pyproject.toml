@@ -14,7 +14,9 @@ pytest = "^5.2"
 black = "^19.10b0"
 
 [tool.poetry.scripts]
+option = "mtoptions.cli:option"
 puts = "mtoptions.cli:puts"
+series = "mtoptions.cli:series"
 
 [build-system]
 requires = ["poetry>=0.12"]
