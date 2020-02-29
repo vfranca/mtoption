@@ -1,4 +1,4 @@
-from mtoptions import cli
+from mtoption import cli
 from click.testing import CliRunner
 from unittest import mock, skip
 from .fixtures import series
@@ -8,7 +8,7 @@ runner = CliRunner()
 
 
 @skip("retornando resultado inesperado")
-@mock.patch("mtoptions.options.mql5")
+@mock.patch("mtoption.option.mql5")
 def test_exibe_as_puts_do_ativo(mql5):
     mql5.iClose.return_value = 0.19
     res = runner.invoke(cli.puts, ["bova11", 96, 99])

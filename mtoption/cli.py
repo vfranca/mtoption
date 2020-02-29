@@ -1,5 +1,5 @@
 import click
-from mtoptions import options
+from mtoption import option as op
 
 
 @click.group()
@@ -14,9 +14,9 @@ def option():
 @click.argument("limit", type=int)
 def puts(symbol, start, limit):
     """Exibe as puts do ativo."""
-    symbols = options.puts(symbol, start, limit)
+    symbols = op.puts(symbol, start, limit)
     for symbol in symbols:
-        price = options.price(symbol)
+        price = op.price(symbol)
         click.echo("%s %.2f" % (symbol, price))
     return 0
 
@@ -25,7 +25,7 @@ def puts(symbol, start, limit):
 @click.argument("type")
 def series(type):
     """Exibe as séries das opções call e put."""
-    all_series = options.get_series(type)
+    all_series = op.get_series(type)
     for month in all_series:
         click.echo("%s %s" % (all_series[month], month))
     return 0

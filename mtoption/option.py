@@ -1,5 +1,5 @@
 from PyMQL5 import PyMQL5
-from mtoptions import series
+from mtoption import series
 
 
 mql5 = PyMQL5()
