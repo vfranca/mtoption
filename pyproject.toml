@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "mtoption"
+version = "0.1.0"
+description = "Utilitario de linha de comando para operacoes com opcoes no MetaTrader 5"
+authors = ["Valmir Franca <vfranca3@gmail.com>"]
+maintainers = ["Valmir Franca <vfranca3@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/vfranca/mtoption"
+keywords = ["metatrader5", "trading", "opções", "cli"]
+classifiers = [
+"Development Status :: 2 - Pre-Alpha",
+"Environment :: Console",
+"Intended Audience :: Financial and Insurance Industry",
+"License :: OSI Approved :: MIT License",
+"Natural Language :: Portuguese (Brazilian)",
+"Operating System :: Microsoft :: Windows :: Windows 10",
+"Programming Language :: Python :: 3.8",
+"Topic :: Adaptive Technologies",
+"Topic :: Office/Business :: Financial :: Investment"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.0"
+pymql5 = "^1.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+
+[tool.poetry.scripts]
+op = "mtoption.cli:option"
+puts = "mtoption.cli:puts"
+series = "mtoption.cli:series"
+ta = "mtoption.cli:bullspread"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
