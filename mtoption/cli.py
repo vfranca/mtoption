@@ -31,5 +31,21 @@ def series(type):
     return 0
 
 
+@click.command()
+@click.argument("call1")
+@click.argument("call2")
+def bullspread(call1, call2):
+    """Exibe dados de um bull spread."""
+    premio1 = op.premio(call1)
+    premio2 = op.premio(call2)
+    premio = abs(premio2 - premio1)
+    click.echo("bull spread")
+    click.echo("venda %s %.2f" % (call1.upper(), premio1))
+    click.echo("compra %s %.2f" % (call2.upper(), premio2))
+    click.echo("premio %.2f" % premio)
+    return 0
+
+
 option.add_command(puts)
 option.add_command(series)
+option.add_command(bullspread)
