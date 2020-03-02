@@ -16,8 +16,8 @@ def puts(prefix: str, start: int, limit: int) -> list:
     return res
 
 
-def price(symbol: str) -> float:
-    """Retorna o preço da opção."""
+def premio(symbol: str) -> float:
+    """Retorna o prêmio da opção."""
     return mql5.iClose(symbol, "Daily", 0)
 
 
