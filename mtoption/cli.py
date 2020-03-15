@@ -4,7 +4,7 @@ from mtoption import option as op
 
 @click.group()
 def option():
-    """Console de scripts para MTOptions."""
+    """Console de scripts para MTOption."""
     pass
 
 
@@ -34,18 +34,18 @@ def series(type):
 @click.command()
 @click.argument("call1")
 @click.argument("call2")
-def bullspread(call1, call2):
+def callbullspread(call1, call2):
     """Exibe dados de um bull spread."""
     premio1 = op.premio(call1)
     premio2 = op.premio(call2)
-    premio = abs(premio2 - premio1)
-    click.echo("bull spread")
+    saldo = abs(premio2 - premio1)
+    click.echo("Call Bull Spread")
     click.echo("venda %s %.2f" % (call1.upper(), premio1))
     click.echo("compra %s %.2f" % (call2.upper(), premio2))
-    click.echo("premio %.2f" % premio)
+    click.echo("saldo %.2f" % saldo)
     return 0
 
 
 option.add_command(puts)
 option.add_command(series)
-option.add_command(bullspread)
+option.add_command(callbullspread)

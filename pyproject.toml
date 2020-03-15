@@ -33,7 +33,7 @@ black = "^19.10b0"
 op = "mtoption.cli:option"
 puts = "mtoption.cli:puts"
 series = "mtoption.cli:series"
-ta = "mtoption.cli:bullspread"
+cbs = "mtoption.cli:callbullspread"
 
 [build-system]
 requires = ["poetry>=0.12"]
