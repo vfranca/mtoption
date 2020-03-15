@@ -46,6 +46,22 @@ def bullspread(option1, option2):
     return 0
 
 
+@click.command()
+@click.argument("option1")
+@click.argument("option2")
+def bearspread(option1, option2):
+    """Exibe uma trava de baixa."""
+    premio1 = op.premio(option1)
+    premio2 = op.premio(option2)
+    saldo = premio1 - premio2
+    click.echo("Bear Spread")
+    click.echo("venda %s %.2f" % (option1.upper(), premio1))
+    click.echo("compra %s %.2f" % (option2.upper(), premio2))
+    click.echo("saldo %.2f" % saldo)
+    return 0
+
+
 option.add_command(puts)
 option.add_command(series)
 option.add_command(bullspread)
+option.add_command(bearspread)
