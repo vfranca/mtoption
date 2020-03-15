@@ -35,3 +35,21 @@ Bull Spread
 venda BOVAC110 0.14  
 compra BOVAC109 0.17  
 saldo -0.03  
+
+### op bearspread  
+Exibe dados de uma trava de baixa.  
+```
+op bearspread <opcao1> <opcao2>  
+ou  
+tb <opcao1> <opcao2>  
+```
+Exibe dados da trava de baixa com opcao1 e opcao2.  
+Exemplo:  
+```
+tb bovao109 bovao110  
+```
+resultado:  
+Bear Spread  
+venda BOVAO109 0.14  
+compra BOVAO110 0.17  
+saldo -0.03  

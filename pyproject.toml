@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mtoption"
-version = "0.1.1"
+version = "0.2.0"
 description = "Utilitario de linha de comando para operacoes com opcoes no MetaTrader 5"
 authors = ["Valmir Franca <vfranca3@gmail.com>"]
 maintainers = ["Valmir Franca <vfranca3@gmail.com>"]
@@ -34,6 +34,7 @@ op = "mtoption.cli:option"
 puts = "mtoption.cli:puts"
 series = "mtoption.cli:series"
 ta = "mtoption.cli:bullspread"
+tb = "mtoption.cli:bearspread"
 
 [build-system]
 requires = ["poetry>=0.12"]
