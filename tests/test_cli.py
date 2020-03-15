@@ -47,3 +47,15 @@ def test_exibe_uma_trava_de_alta_com_put(op):
     expec += "saldo 0.00\n"
     assert res.output == expec
     assert res.exit_code == 0
+
+
+@mock.patch("mtoption.cli.op")
+def test_exibe_uma_trava_de_baixa_com_put(op):
+    op.premio.return_value = 0.18
+    res = runner.invoke(cli.bearspread, ["bovao109", "bovao110"])
+    expec = "Bear Spread\n"
+    expec += "venda BOVAO109 0.18\n"
+    expec += "compra BOVAO110 0.18\n"
+    expec += "saldo 0.00\n"
+    assert res.output == expec
+    assert res.exit_code == 0
