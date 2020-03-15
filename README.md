@@ -19,19 +19,19 @@ Utilitário de linha de comando para operações com opções utilizando o MetaT
 ## Comandos  
 
 ### op bullspread  
-Exibe dados de uma trava de alta de duas calls.  
+Exibe dados de uma trava de alta.  
 ```
-op bullspread <call1> <call2>  
+op bullspread <opcao1> <opcao2>  
 ou  
-ta <call1> <call2>  
+ta <opcao1> <opcao2>  
 ```
-Exibe dados da trava de alta com call1 e call2.  
+Exibe dados da trava de alta com opcao1 e opcao2.  
 Exemplo:  
 ```
 ta bovac110 bovac109  
 ```
 resultado:  
-bull spread  
+Bull Spread  
 venda BOVAC110 0.14  
 compra BOVAC109 0.17  
-premio 0.03  
+saldo -0.03  

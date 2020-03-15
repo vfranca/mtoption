@@ -26,12 +26,24 @@ def test_exibe_todas_as_series_do_tipo_de_opcao():
 
 
 @mock.patch("mtoption.cli.op")
-def test_comando_exibe_resultado_de_trava_de_alta(op):
+def test_exibe_uma_trava_de_alta_com_call(op):
     op.premio.return_value = 0.18
     res = runner.invoke(cli.bullspread, ["bovac110", "bovac109"])
-    expec = "bull spread\n"
+    expec = "Bull Spread\n"
     expec += "venda BOVAC110 0.18\n"
     expec += "compra BOVAC109 0.18\n"
-    expec += "premio 0.00\n"
+    expec += "saldo 0.00\n"
+    assert res.output == expec
+    assert res.exit_code == 0
+
+
+@mock.patch("mtoption.cli.op")
+def test_exibe_uma_trava_de_alta_com_put(op):
+    op.premio.return_value = 0.18
+    res = runner.invoke(cli.bullspread, ["bovao110", "bovao109"])
+    expec = "Bull Spread\n"
+    expec += "venda BOVAO110 0.18\n"
+    expec += "compra BOVAO109 0.18\n"
+    expec += "saldo 0.00\n"
     assert res.output == expec
     assert res.exit_code == 0
